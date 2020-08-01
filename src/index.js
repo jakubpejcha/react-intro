@@ -1,29 +1,60 @@
-// Expressions
 import React from "react";
 import ReactDOM from "react-dom";
 
-const fName = "Jakub";
-const lName = "Pejcha";
+const img = "https://picsum.photos/200";
 
-// Template litterals plus (within) JSX js insertion
+const customStyle = {
+  color: "red",
+  fontSize: "20px",
+  border: "1px solid black"
+};
+
+customStyle.color = "blue";
+
+// not class, but className
 ReactDOM.render(
   <div>
-    <h1>Hello {`${fName} ${lName}`}!</h1>
-    <p>A random number: {Math.floor(Math.random() * 10)}</p>
+    <h1 className="heading_SJSX">My Photos</h1>
+    <h2 style={{ color: "red" }}>Random</h2>
+    <h2 style={customStyle}>and Taken</h2>
+    <div>
+      <img src={img} alt="random" />
+      <img
+        className="my-image_SJSX"
+        src="https://probella.com/wp-content/uploads/2018/03/React-JS.png"
+        alt="react"
+      />
+    </div>
   </div>,
   document.getElementById("root")
 );
 
-// Excercise
-/*
-const name = "Jakub Pejcha";
-const curDate = new Date();
+//excercise
+
+const today = new Date();
+const timeHours = today.getHours();
+
+let text;
+const style = {
+  color: "red"
+};
+
+if (timeHours < 12) {
+  text = "Good morning";
+  style.color = "red";
+} else if (timeHours < 18) {
+  text = "Good afternoon";
+  style.color = "green";
+} else {
+  text = "Good evening";
+  style.color = "blue";
+}
 
 ReactDOM.render(
   <div>
-    <p>Created by: {name}</p>
-    <p>Copyright: {curDate.getFullYear()}</p>
+    <h1 className="heading_exc" style={style}>
+      {text}
+    </h1>
   </div>,
   document.getElementById("root")
 );
-*/

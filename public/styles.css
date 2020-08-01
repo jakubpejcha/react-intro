@@ -1,0 +1,15 @@
+/**** Styling and JSX attributes ******/
+.heading_SJSX {
+  color: red;
+}
+
+.my-image_SJSX {
+  width: 100px;
+  height: 100px;
+}
+
+.heading_exc {
+  font-size: 50px;
+  font-weight: bold;
+  border-bottom: 5px solid black;
+}
