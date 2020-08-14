@@ -1,8 +1,6 @@
 import React from "react";
 
 function ToDoItem(props) {
-  const [lineThrough, setLineThrough] = React.useState(false);
-
   return (
     <div
       onClick={() => {
